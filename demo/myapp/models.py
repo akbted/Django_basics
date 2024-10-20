@@ -8,5 +8,13 @@ from django.db import models
 # Model to create a simple Database of TodoItems
 class TodoItem(models.Model):
     title = models.CharField(max_length=200)  # Char Field
-    description = models.TextField()
     completed = models.BooleanField(default=False)  # Boolean Field
+    # Model to create a simple Database of Categories
+
+
+class Category(models.Model):
+    name = models.CharField(max_length=100)  # Char Field
+    description = models.TextField()
+
+    def __str__(self):
+        return self.name
