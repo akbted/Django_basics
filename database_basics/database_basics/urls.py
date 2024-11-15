@@ -16,8 +16,11 @@ Including another URLconf
 """
 
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 
 urlpatterns = [
     path("admin/", admin.site.urls),
+    path(
+        "", include("tododatabase.urls")
+    ),  # Add the app's urls.py file to the project's urlpatternss
 ]
