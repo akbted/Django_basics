@@ -1,4 +1,4 @@
 from django.urls import path
 from . import views
 
-urlpatterns = [path("page1", views.index, name="index")]
+urlpatterns = [path("<int:id>", views.index, name="index")]
